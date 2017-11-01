@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5670DA5B1FA87ACF0034FD50 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5670DA5A1FA87ACF0034FD50 /* BaseNavigationController.m */; };
+		5670DA611FA87DE70034FD50 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5670DA601FA87DE70034FD50 /* BaseViewController.m */; };
+		5670DA641FA87E0E0034FD50 /* FilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5670DA631FA87E0E0034FD50 /* FilterViewController.m */; };
+		5670DA671FA87E750034FD50 /* Filter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5670DA661FA87E750034FD50 /* Filter.m */; };
+		5670DA6B1FA890AC0034FD50 /* GeneratationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5670DA6A1FA890AC0034FD50 /* GeneratationViewController.m */; };
 		56E3AF291FA6CB0600224BD8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 56E3AF281FA6CB0600224BD8 /* AppDelegate.m */; };
 		56E3AF2C1FA6CB0600224BD8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56E3AF2B1FA6CB0600224BD8 /* ViewController.m */; };
 		56E3AF2F1FA6CB0600224BD8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56E3AF2D1FA6CB0600224BD8 /* Main.storyboard */; };
@@ -16,6 +21,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5670DA591FA87ACF0034FD50 /* BaseNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
+		5670DA5A1FA87ACF0034FD50 /* BaseNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
+		5670DA5F1FA87DE70034FD50 /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		5670DA601FA87DE70034FD50 /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		5670DA621FA87E0E0034FD50 /* FilterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilterViewController.h; sourceTree = "<group>"; };
+		5670DA631FA87E0E0034FD50 /* FilterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilterViewController.m; sourceTree = "<group>"; };
+		5670DA651FA87E750034FD50 /* Filter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Filter.h; sourceTree = "<group>"; };
+		5670DA661FA87E750034FD50 /* Filter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Filter.m; sourceTree = "<group>"; };
+		5670DA691FA890AC0034FD50 /* GeneratationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeneratationViewController.h; sourceTree = "<group>"; };
+		5670DA6A1FA890AC0034FD50 /* GeneratationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeneratationViewController.m; sourceTree = "<group>"; };
 		56E3AF241FA6CB0600224BD8 /* CoreImageDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreImageDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56E3AF271FA6CB0600224BD8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		56E3AF281FA6CB0600224BD8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -39,6 +54,60 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5670DA571FA87A9F0034FD50 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				5670DA5E1FA87DDD0034FD50 /* BaseViewController */,
+				5670DA581FA87AB20034FD50 /* BaseNavigation */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		5670DA581FA87AB20034FD50 /* BaseNavigation */ = {
+			isa = PBXGroup;
+			children = (
+				5670DA591FA87ACF0034FD50 /* BaseNavigationController.h */,
+				5670DA5A1FA87ACF0034FD50 /* BaseNavigationController.m */,
+			);
+			path = BaseNavigation;
+			sourceTree = "<group>";
+		};
+		5670DA5C1FA87D9F0034FD50 /* Native */ = {
+			isa = PBXGroup;
+			children = (
+				5670DA681FA8909A0034FD50 /* Generataion */,
+				5670DA5D1FA87DB60034FD50 /* Tool */,
+			);
+			path = Native;
+			sourceTree = "<group>";
+		};
+		5670DA5D1FA87DB60034FD50 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				5670DA621FA87E0E0034FD50 /* FilterViewController.h */,
+				5670DA631FA87E0E0034FD50 /* FilterViewController.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		5670DA5E1FA87DDD0034FD50 /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5670DA5F1FA87DE70034FD50 /* BaseViewController.h */,
+				5670DA601FA87DE70034FD50 /* BaseViewController.m */,
+			);
+			path = BaseViewController;
+			sourceTree = "<group>";
+		};
+		5670DA681FA8909A0034FD50 /* Generataion */ = {
+			isa = PBXGroup;
+			children = (
+				5670DA691FA890AC0034FD50 /* GeneratationViewController.h */,
+				5670DA6A1FA890AC0034FD50 /* GeneratationViewController.m */,
+			);
+			path = Generataion;
+			sourceTree = "<group>";
+		};
 		56E3AF1B1FA6CB0500224BD8 = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +127,10 @@
 		56E3AF261FA6CB0600224BD8 /* CoreImageDemo */ = {
 			isa = PBXGroup;
 			children = (
+				5670DA651FA87E750034FD50 /* Filter.h */,
+				5670DA661FA87E750034FD50 /* Filter.m */,
+				5670DA5C1FA87D9F0034FD50 /* Native */,
+				5670DA571FA87A9F0034FD50 /* Base */,
 				56E3AF271FA6CB0600224BD8 /* AppDelegate.h */,
 				56E3AF281FA6CB0600224BD8 /* AppDelegate.m */,
 				56E3AF2A1FA6CB0600224BD8 /* ViewController.h */,
@@ -142,9 +215,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5670DA5B1FA87ACF0034FD50 /* BaseNavigationController.m in Sources */,
+				5670DA671FA87E750034FD50 /* Filter.m in Sources */,
+				5670DA611FA87DE70034FD50 /* BaseViewController.m in Sources */,
 				56E3AF2C1FA6CB0600224BD8 /* ViewController.m in Sources */,
 				56E3AF371FA6CB0600224BD8 /* main.m in Sources */,
+				5670DA641FA87E0E0034FD50 /* FilterViewController.m in Sources */,
 				56E3AF291FA6CB0600224BD8 /* AppDelegate.m in Sources */,
+				5670DA6B1FA890AC0034FD50 /* GeneratationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
