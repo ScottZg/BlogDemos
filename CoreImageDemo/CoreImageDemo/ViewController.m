@@ -60,7 +60,7 @@
 #pragma mark - Lazy load
 - (NSMutableArray *)toolArr {
     if (!_toolArr) {
-        _toolArr = [[NSMutableArray alloc] initWithObjects:@"亮度", nil];
+        _toolArr = [[NSMutableArray alloc] initWithObjects:@"复古", nil];
     }
     return _toolArr;
 }

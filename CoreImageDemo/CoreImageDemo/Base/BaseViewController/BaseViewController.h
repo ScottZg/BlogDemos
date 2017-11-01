@@ -10,4 +10,5 @@
 
 @interface BaseViewController : UIViewController
 
+- (void)alertWithTitle:(NSString *)title andMessage:(NSString *)msg andButtonTitle:(NSString *)btnTitle;
 @end

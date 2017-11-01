@@ -29,10 +29,10 @@
 - (IBAction)buttonAction:(id)sender {
     
     UIImage *image = self.imageView.image;
-    NSData *imageData = UIImagePNGRepresentation(image);
-    CIImage *ciImage = [CIImage imageWithData:imageData];
+    CIImage *ciImage = [CIImage imageWithCGImage:image.CGImage];
     
-    //    CIContext *context = [CIContext context];
+    
+    CIContext *context = [CIContext context];
     
     
     CIFilter *filter = [CIFilter filterWithName:@"CISepiaTone"];
@@ -40,8 +40,9 @@
     [filter setValue:@(self.slider.value) forKey:kCIInputIntensityKey];
     
     
-    UIImage *newImage = [UIImage imageWithCIImage:filter.outputImage];
-    
+    CGImageRef cgimg = [context createCGImage:[filter outputImage] fromRect:[[filter outputImage] extent]];
+    UIImage *newImage = [UIImage imageWithCGImage:cgimg];
+    CGImageRelease(cgimg);
     [self performSegueWithIdentifier:@"showGenerate" sender:newImage];
 }
 - (void)addGest {
@@ -55,7 +56,7 @@
         [self showPhoto];
     }];
     UIAlertAction *takePhotoAction = [UIAlertAction actionWithTitle:@"拍照" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        
+        [self showCamera];
     }];
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         
@@ -65,6 +66,17 @@
     [alert addAction:cancelAction];
     [self presentViewController:alert animated:YES completion:nil];
     
+}
+- (void)showCamera {
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        _picker = [[UIImagePickerController alloc] init];
+        
+        _picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+        
+        _picker.delegate = self;
+        
+        [self presentViewController:_picker animated:YES completion:nil];
+    }
 }
 - (void)showPhoto {
     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]) {
@@ -96,7 +108,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     GeneratationViewController *vc = segue.destinationViewController;
     UIImage *image = (UIImage *)sender;
-    [vc setValue:image forKey:@"img"];
+    vc.img = image;
 }
 /*
 #pragma mark - Navigation

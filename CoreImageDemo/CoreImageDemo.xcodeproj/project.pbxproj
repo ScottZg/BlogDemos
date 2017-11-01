@@ -12,6 +12,7 @@
 		5670DA641FA87E0E0034FD50 /* FilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5670DA631FA87E0E0034FD50 /* FilterViewController.m */; };
 		5670DA671FA87E750034FD50 /* Filter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5670DA661FA87E750034FD50 /* Filter.m */; };
 		5670DA6B1FA890AC0034FD50 /* GeneratationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5670DA6A1FA890AC0034FD50 /* GeneratationViewController.m */; };
+		5674645D1FA9997900B43558 /* PhotoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5674645C1FA9997900B43558 /* PhotoManager.m */; };
 		56E3AF291FA6CB0600224BD8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 56E3AF281FA6CB0600224BD8 /* AppDelegate.m */; };
 		56E3AF2C1FA6CB0600224BD8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56E3AF2B1FA6CB0600224BD8 /* ViewController.m */; };
 		56E3AF2F1FA6CB0600224BD8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56E3AF2D1FA6CB0600224BD8 /* Main.storyboard */; };
@@ -31,6 +32,10 @@
 		5670DA661FA87E750034FD50 /* Filter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Filter.m; sourceTree = "<group>"; };
 		5670DA691FA890AC0034FD50 /* GeneratationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeneratationViewController.h; sourceTree = "<group>"; };
 		5670DA6A1FA890AC0034FD50 /* GeneratationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeneratationViewController.m; sourceTree = "<group>"; };
+		5674645B1FA9997900B43558 /* PhotoManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoManager.h; sourceTree = "<group>"; };
+		5674645C1FA9997900B43558 /* PhotoManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoManager.m; sourceTree = "<group>"; };
+		5674645F1FA9A64C00B43558 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
+		567464601FA9A65400B43558 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		56E3AF241FA6CB0600224BD8 /* CoreImageDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreImageDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56E3AF271FA6CB0600224BD8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		56E3AF281FA6CB0600224BD8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -77,6 +82,8 @@
 			children = (
 				5670DA681FA8909A0034FD50 /* Generataion */,
 				5670DA5D1FA87DB60034FD50 /* Tool */,
+				5674645B1FA9997900B43558 /* PhotoManager.h */,
+				5674645C1FA9997900B43558 /* PhotoManager.m */,
 			);
 			path = Native;
 			sourceTree = "<group>";
@@ -108,11 +115,21 @@
 			path = Generataion;
 			sourceTree = "<group>";
 		};
+		5674645E1FA9A64C00B43558 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				567464601FA9A65400B43558 /* AssetsLibrary.framework */,
+				5674645F1FA9A64C00B43558 /* Photos.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		56E3AF1B1FA6CB0500224BD8 = {
 			isa = PBXGroup;
 			children = (
 				56E3AF261FA6CB0600224BD8 /* CoreImageDemo */,
 				56E3AF251FA6CB0600224BD8 /* Products */,
+				5674645E1FA9A64C00B43558 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -219,6 +236,7 @@
 				5670DA671FA87E750034FD50 /* Filter.m in Sources */,
 				5670DA611FA87DE70034FD50 /* BaseViewController.m in Sources */,
 				56E3AF2C1FA6CB0600224BD8 /* ViewController.m in Sources */,
+				5674645D1FA9997900B43558 /* PhotoManager.m in Sources */,
 				56E3AF371FA6CB0600224BD8 /* main.m in Sources */,
 				5670DA641FA87E0E0034FD50 /* FilterViewController.m in Sources */,
 				56E3AF291FA6CB0600224BD8 /* AppDelegate.m in Sources */,
@@ -359,6 +377,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4ATZY28W58;
 				INFOPLIST_FILE = CoreImageDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shuqu.CoreImageDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -373,6 +392,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4ATZY28W58;
 				INFOPLIST_FILE = CoreImageDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shuqu.CoreImageDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

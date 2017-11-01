@@ -20,6 +20,12 @@
     // Do any additional setup after loading the view.
 }
 
+- (void)alertWithTitle:(NSString *)title andMessage:(NSString *)msg andButtonTitle:(NSString *)btnTitle {
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:msg preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *action = [UIAlertAction actionWithTitle:btnTitle style:UIAlertActionStyleDefault handler:nil];
+    [alert addAction:action];
+    [self presentViewController:alert animated:YES completion:nil];
+}
 /*
 #pragma mark - Navigation
 
